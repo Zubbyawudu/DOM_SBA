@@ -1,0 +1,41 @@
+body{
+  background-image: url("images/photo-1539628399213-d6aa89c93074.avif");
+}
+
+#data-input{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 400px;
+  border: 4px transparent rgba(123, 46, 191,0.756);
+  align-items: center;
+  margin: auto;
+  margin-top: 100px;
+  background-color: transparent;
+  color: white;
+  font-size: larger;
+  border: solid black;
+
+  
+  
+}
+
+.box{
+  background-color: whitesmoke;
+  width: 300px;
+  height: 10vh;
+  font-size: medium;
+  border: 0px transparent black;
+  border-radius: 10px;
+  
+}
+
+
+
+button{
+  padding:5px;
+  font-size: large;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  background-color: white;
+}
