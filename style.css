@@ -1,20 +1,31 @@
 body{
   background-image: url("images/photo-1539628399213-d6aa89c93074.avif");
+  background-size: cover;
+  
+}
+h1{
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  
 }
 
+h2{
+  color: black;
+}
 #data-input{
   display: flex;
   flex-direction: column;
   width: 400px;
-  height: 400px;
+  height: 480px;
   border: 4px transparent rgba(123, 46, 191,0.756);
   align-items: center;
   margin: auto;
-  margin-top: 100px;
-  background-color: transparent;
+  margin-top: 200px;
+  background-color: rgba(241, 233, 233, 0.496);
   color: white;
   font-size: larger;
-  border: solid black;
+  border-radius: 20px;
 
   
   
@@ -29,13 +40,20 @@ body{
   border-radius: 10px;
   
 }
-
+.checkbox{
+  color: blue
+}
 
 
 button{
   padding:5px;
   font-size: large;
+  width: 100px;
   margin-bottom: 10px;
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: white;
+}
+button:hover{
+  background-color: black;
+  color: white;
 }
