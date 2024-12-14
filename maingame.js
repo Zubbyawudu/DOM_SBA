@@ -93,3 +93,12 @@ const loadPreviousImage = () => {
   });
 }
 previousbtn.addEventListener("click",loadPreviousImage);
+
+// Function for correct answer
+const correctAnswer = (selectedOption) => {
+  if (selectedOption === currentLogo.answer) { 
+    scoreCount++;
+    score.textContent = scoreCount;
+  }
+  
+}
