@@ -70,11 +70,17 @@ const logosArray = [{
 },
 ];
 
+
+
+
 //function to load next image and ques
 const loadNextImage = () => {
+  
+  // To check if all logos have been Viewed 
   if (visitedlogos.length === logosArray.length) {
     visitedlogos = [];
     console.log("All logos have been visited.");
+    alert("Your score is: " + scoreCount +  " . Click OK to view your price");
   }
   do {
     randomIndex = Math.floor(Math.random() * logosArray.length);
@@ -100,6 +106,8 @@ nextbtn.addEventListener("click",loadNextImage);
 
 //function to load previous image and question
 
+
+
 const loadPreviousImage = () => {
   const currrentIndex = 0;
   const previousIndex = ( currrentIndex - 1 + logosArray.length) % logosArray.length;
@@ -110,6 +118,8 @@ const loadPreviousImage = () => {
   });
 }
 previousbtn.addEventListener("click",loadPreviousImage);
+
+
 
 // Function for correct answer
 const correctAnswer = (selectedOption) => {
@@ -131,18 +141,27 @@ const wrongAnswer = (selectedOption , event) => {
     scoreCount;
     
   }
-  // loadNextImage();
-}
-
-
-answerContainer.addEventListener("click", (event) => {
-  const selectedOption = event.target.textContent;
   options.forEach(option => {
     if (option !== event.target) {
       option.style.backgroundColor = "";
       option.style.color = "";
     }
   });
+  loadNextImage();
+  
+}
+
+
+answerContainer.addEventListener("click", (event) => {
+  const selectedOption = event.target.textContent;
+  // to be able to select only one option
+  options.forEach(option => {
+    if (option !== event.target) {
+      option.style.backgroundColor = "";
+      option.style.color = "";
+    }
+  });
+  // To check if the selected option is correct when clicked
   if (selectedOption === logosArray[randomIndex].answer) {
     event.target.style.backgroundColor = "green";
     event.target.style.color = "white";
@@ -165,3 +184,5 @@ const restartQuiz = () => {
   loadNextImage();
 }
 restartbtn.addEventListener("click", restartQuiz);
+
+
