@@ -88,6 +88,12 @@ const loadNextImage = () => {
     option.textContent = currentLogo.options[number];
   });
 
+  // To reset the background color of the options 
+  options.forEach(option => {
+    option.style.backgroundColor = "";
+    option.style.color = "";
+  });
+
   
 };
 nextbtn.addEventListener("click",loadNextImage);
@@ -125,12 +131,18 @@ const wrongAnswer = (selectedOption , event) => {
     scoreCount;
     
   }
-  loadNextImage();
+  // loadNextImage();
 }
 
 
 answerContainer.addEventListener("click", (event) => {
   const selectedOption = event.target.textContent;
+  options.forEach(option => {
+    if (option !== event.target) {
+      option.style.backgroundColor = "";
+      option.style.color = "";
+    }
+  });
   if (selectedOption === logosArray[randomIndex].answer) {
     event.target.style.backgroundColor = "green";
     event.target.style.color = "white";
