@@ -100,5 +100,5 @@ const correctAnswer = (selectedOption) => {
     scoreCount++;
     score.textContent = scoreCount;
   }
-  
 }
+options.addEventListener("click", correctAnswer);
