@@ -5,9 +5,10 @@ const previousbtn = document.querySelector(".previous");
 const nextbtn = document.querySelector(".next");
 const score = document.querySelector(".score");
 const scoreContainer = document.querySelector(".scorecontainer");
-
+const restartbtn = document.querySelector(".restart");
 let scoreCount = 0;
 let randomIndex = 0;
+let visitedlogos = [];
 
 
 // Alert Section
@@ -71,14 +72,22 @@ const logosArray = [{
 
 //function to load next image and ques
 const loadNextImage = () => {
-  randomIndex = Math.floor(Math.random() * logosArray.length);
+  if (visitedlogos.length === logosArray.length) {
+    visitedlogos = [];
+    console.log("All logos have been visited.");
+  }
+  do {
+    randomIndex = Math.floor(Math.random() * logosArray.length);
+  } while (visitedlogos.includes(randomIndex));
+  visitedlogos.push(randomIndex);
+  
   const currentLogo = logosArray[randomIndex];
   // console.log(currentLogo);
   logoContainer.innerHTML = `<img src="${currentLogo.image}" alt="Logo">`;
   options.forEach((option, number) => {
     option.textContent = currentLogo.options[number];
   });
-  
+
   
 };
 nextbtn.addEventListener("click",loadNextImage);
@@ -112,3 +121,14 @@ answerContainer.addEventListener("click", (event) => {
   correctAnswer(selectedOption);
   
 });
+
+
+//Funtion to restart Quiz
+const restartQuiz = () => {
+  scoreCount = 0;
+  randomIndex = 0;
+  visitedlogos = [];
+  score.textContent = "Score: " + scoreCount;
+  loadNextImage();
+}
+restartbtn.addEventListener("click", restartQuiz);
