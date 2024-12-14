@@ -69,4 +69,16 @@ const logosArray = [{
 },
 ];
 
-//options Section
+//function to load next image and ques
+const loadNextImage = () => {
+  const randomIndex = Math.floor(Math.random() * logosArray.length);
+  const currentLogo = logosArray[randomIndex];
+  logoContainer.innerHTML = `<img src="${currentLogo.image}" alt="Logo">`;
+  options.forEach((option, index) => {
+    option.textContent = currentLogo.options[index];
+  });
+  answerContainer.innerHTML = `<button class="options">${currentLogo.answer}</button>`;
+};
+
+
+nextbtn.addEventListener("click",loadNextImage);
