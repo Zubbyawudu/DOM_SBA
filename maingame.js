@@ -73,6 +73,7 @@ const logosArray = [{
 const loadNextImage = () => {
   const randomIndex = Math.floor(Math.random() * logosArray.length);
   const currentLogo = logosArray[randomIndex];
+  // console.log(currentLogo);
   logoContainer.innerHTML = `<img src="${currentLogo.image}" alt="Logo">`;
   options.forEach((option, number) => {
     option.textContent = currentLogo.options[number];
@@ -96,9 +97,15 @@ previousbtn.addEventListener("click",loadPreviousImage);
 
 // Function for correct answer
 const correctAnswer = (selectedOption) => {
+  const randomIndex = Math.floor(Math.random() * logosArray.length);
+  const currentLogo = logosArray[randomIndex];
+ 
   if (selectedOption === currentLogo.answer) { 
     scoreCount++;
-    score.textContent = scoreCount;
+    score.textContent = "Score: " + scoreCount;
   }
 }
-options.addEventListener("click", correctAnswer);
+addEventListener("click", (event) => {
+  const selectedOption = event.target.textContent;
+  correctAnswer(selectedOption);
+});
