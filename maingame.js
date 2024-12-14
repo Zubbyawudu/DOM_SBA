@@ -116,12 +116,32 @@ const correctAnswer = (selectedOption) => {
   
 }
 
-answerContainer.addEventListener("click", (event) => {
+
+
+//Function for wrong answer
+const wrongAnswer = (selectedOption , event) => {
+  const currentLogo = logosArray[randomIndex];
+  if (selectedOption !== currentLogo.answer){
+    scoreCount;
+    event.target.style.color = "red";
+  }
+}
+
+
+options.addEventListener("click", (event) => {
   const selectedOption = event.target.textContent;
-  correctAnswer(selectedOption);
+  if (selectedOption === logosArray[randomIndex].answer) {
+    event.target.style.backgroundColor = "green";
+    event.target.style.color = "white";
+    correctAnswer(selectedOption);
+  }else{
+    wrongAnswer(selectedOption, event);
+    event.target.style.backgroundColor = "red";
+    event.target.style.color = "white";
+  }
+  
   
 });
-
 
 //Funtion to restart Quiz
 const restartQuiz = () => {
