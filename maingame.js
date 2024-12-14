@@ -62,9 +62,11 @@ const logosArray = [{
   image:"https://t3.ftcdn.net/jpg/09/77/21/92/360_F_977219249_zaySrrg3QtBFRbdf4RQE1KvKtawbNgr0.jpg",
   options: ["Chevrolet", "Mercedes Benz", "Jaguar", "Benz"],
   answer: "Mercedes"
-
-}
-  
-]
+},{
+  image:"https://quizbash.com/assets/img/games/logo-audi.jpg",
+  options: ["Lamborghini", "Audi", "Jaguar", "Maxus"],
+  answer: "Audi"
+},
+];
 
 //options Section
