@@ -35,10 +35,33 @@ const logosArray = [{
   options: ["Acura", "Renault", "Jaguar", "Land Rover"],
   answer: "Jaguar"
 },{
-  image:"https://www.jetpunk.com/img/user-img/7e/7e354a846f-450.webp",
+  image:"https://media.proprofs.com/images/QM/user_images/2503852/BMW(2).jpg",
   options: ["mercedes", "BMW", "Dodge", "Tesla"],
   answer: "BMW"
 },{
+  image:"https://logodix.com/logo/1308852.jpg",
+  options: ["Peugeot", "BMW", "Buick", "Toyota"],
+  answer: "Peugeot"
+},{
+  image:"https://www.jetpunk.com/img/user-img/78/781b709a44-450.webp",
+  options: ["Renault", "BMW", "Buick", "Toyota"],
+  answer: "Buick"
+},{
+  image:"https://image.slidesharecdn.com/carlogos-141026165350-conversion-gate02/85/Guess-The-Car-Logos-54-320.jpg",
+  options: ["Mayhem", "Mazda", "Buick", "Maybach"],
+  answer: "Maybach"
+},{
+  image:"https://e1.pxfuel.com/desktop-wallpaper/809/970/desktop-wallpaper-car-logos-the-biggest-archive-of-car-company-logos-1024x768-for-your-mobile-tablet-company-logos.jpg",
+  options: ["Chevrolet", "Honda", "Toyota", "Mazda"],
+  answer: "Chevrolet"
+},{
+  image:"https://www.jetpunk.com/img/user-img/13/132f2b17a2-450.webp",
+  options: ["Chevrolet", "McLaren", "Land Rover", "Tacoma"],
+  answer: "McLaren"
+},{
+  image:"https://t3.ftcdn.net/jpg/09/77/21/92/360_F_977219249_zaySrrg3QtBFRbdf4RQE1KvKtawbNgr0.jpg",
+  options: ["Chevrolet", "Mercedes Benz", "Jaguar", "Benz"],
+  answer: "Mercedes"
 
 }
   
