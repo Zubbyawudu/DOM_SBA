@@ -123,12 +123,13 @@ const wrongAnswer = (selectedOption , event) => {
   const currentLogo = logosArray[randomIndex];
   if (selectedOption !== currentLogo.answer){
     scoreCount;
-    event.target.style.color = "red";
+    
   }
+  loadNextImage();
 }
 
 
-options.addEventListener("click", (event) => {
+answerContainer.addEventListener("click", (event) => {
   const selectedOption = event.target.textContent;
   if (selectedOption === logosArray[randomIndex].answer) {
     event.target.style.backgroundColor = "green";
@@ -136,8 +137,8 @@ options.addEventListener("click", (event) => {
     correctAnswer(selectedOption);
   }else{
     wrongAnswer(selectedOption, event);
-    event.target.style.backgroundColor = "red";
     event.target.style.color = "white";
+    event.target.style.backgroundColor = "red";
   }
   
   
