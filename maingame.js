@@ -74,11 +74,22 @@ const loadNextImage = () => {
   const randomIndex = Math.floor(Math.random() * logosArray.length);
   const currentLogo = logosArray[randomIndex];
   logoContainer.innerHTML = `<img src="${currentLogo.image}" alt="Logo">`;
-  options.forEach((option, index) => {
-    option.textContent = currentLogo.options[index];
+  options.forEach((option, number) => {
+    option.textContent = currentLogo.options[number];
   });
-  answerContainer.innerHTML = `<button class="options">${currentLogo.answer}</button>`;
+  
 };
-
-
 nextbtn.addEventListener("click",loadNextImage);
+
+//function to load previous image and question
+
+const loadPreviousImage = () => {
+  const currrentIndex = 0;
+  const previousIndex = ( currrentIndex - 1 + logosArray.length) % logosArray.length;
+  const previousLogo = logosArray[previousIndex];
+  logoContainer.innerHTML = `<img src="${previousLogo.image}" alt="Logo">`;
+  options.forEach((option, number) => {
+    option.textContent = previousLogo.options[number];
+  });
+}
+previousbtn.addEventListener("click",loadPreviousImage);
