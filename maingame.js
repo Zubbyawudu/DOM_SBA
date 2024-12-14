@@ -7,7 +7,7 @@ const score = document.querySelector(".score");
 const scoreContainer = document.querySelector(".scorecontainer");
 
 let scoreCount = 0;
-
+let randomIndex = 0;
 
 
 // Alert Section
@@ -61,7 +61,7 @@ const logosArray = [{
 },{
   image:"https://t3.ftcdn.net/jpg/09/77/21/92/360_F_977219249_zaySrrg3QtBFRbdf4RQE1KvKtawbNgr0.jpg",
   options: ["Chevrolet", "Mercedes Benz", "Jaguar", "Benz"],
-  answer: "Mercedes"
+  answer: "Mercedes Benz"
 },{
   image:"https://quizbash.com/assets/img/games/logo-audi.jpg",
   options: ["Lamborghini", "Audi", "Jaguar", "Maxus"],
@@ -71,13 +71,14 @@ const logosArray = [{
 
 //function to load next image and ques
 const loadNextImage = () => {
-  const randomIndex = Math.floor(Math.random() * logosArray.length);
+  randomIndex = Math.floor(Math.random() * logosArray.length);
   const currentLogo = logosArray[randomIndex];
   // console.log(currentLogo);
   logoContainer.innerHTML = `<img src="${currentLogo.image}" alt="Logo">`;
   options.forEach((option, number) => {
     option.textContent = currentLogo.options[number];
   });
+  
   
 };
 nextbtn.addEventListener("click",loadNextImage);
@@ -97,15 +98,17 @@ previousbtn.addEventListener("click",loadPreviousImage);
 
 // Function for correct answer
 const correctAnswer = (selectedOption) => {
-  const randomIndex = Math.floor(Math.random() * logosArray.length);
   const currentLogo = logosArray[randomIndex];
  
   if (selectedOption === currentLogo.answer) { 
     scoreCount++;
     score.textContent = "Score: " + scoreCount;
   }
+  
 }
-addEventListener("click", (event) => {
+
+answerContainer.addEventListener("click", (event) => {
   const selectedOption = event.target.textContent;
   correctAnswer(selectedOption);
+  
 });
