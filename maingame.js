@@ -67,7 +67,16 @@ const logosArray = [{
   image:"https://quizbash.com/assets/img/games/logo-audi.jpg",
   options: ["Lamborghini", "Audi", "Jaguar", "Maxus"],
   answer: "Audi"
-},
+},{
+  image:"https://blog.logomaster.ai/hs-fs/hubfs/ferrari-logo-1929.jpg?width=1700&height=1148&name=ferrari-logo-1929.jpg",
+  options: ["Lamborghini", "Audi", "Jaguar", "Ferrari"],
+  answer: "Ferrari"
+},{
+  mage:"https://i.pinimg.com/736x/6e/d4/d7/6ed4d7da41fc086258d5499e9a3cfbe8.jpg",
+  options: ["Toyota", "Renault", "Ferrari", "Mercedes Benz"],
+  answer: "Toyota"
+}
+
 ];
 
 
@@ -175,7 +184,7 @@ answerContainer.addEventListener("click", (event) => {
   
 });
 
-//Funtion to restart Quiz
+//Function to restart Quiz
 const restartQuiz = () => {
   scoreCount = 0;
   randomIndex = 0;
