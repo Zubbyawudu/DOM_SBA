@@ -219,5 +219,6 @@ if (scoreCount >= 18) {
   alert("Congratulations you have won a prize")
   
 } else {
+  alert("Restart to play again")
   
 }
