@@ -202,7 +202,6 @@ answerContainer.addEventListener("click", (event) => {
     event.target.style.backgroundColor = "red";
   }
   
-  
 });
 
 //Function to restart Quiz
