@@ -1,6 +1,8 @@
 body{
   background-image: url("https://images.unsplash.com/photo-1658066883463-c841d8f23334?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 h1{
@@ -14,7 +16,7 @@ h2{
   
 }
 .logocontainer{
-  border: solid black;
+  border: 1px solid whitesmoke;
   width: 50%;
   height: 50%;
   margin: auto;
@@ -30,7 +32,7 @@ h2{
 }
 .answercontainer{
   width: 60%;
-  border:1px solid ;
+  border:1px solid rgb(184, 175, 175) ;
   height: 120px;
   display: flex;
   flex-direction: row;
@@ -40,6 +42,7 @@ h2{
   flex-wrap: wrap;
   background-color: rgba(241, 233, 233, 0.496);
   justify-content: center;
+  border-radius: 5px;
 }
 .options{
   border:1px solid black;
