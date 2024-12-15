@@ -107,21 +107,33 @@ const loadNextImage = () => {
   
   // To check if all logos have been Viewed 
   if (visitedlogos.length === logosArray.length) {
-    // visitedlogos = [];
+    visitedlogos = [];
     console.log("All logos have been visited.");
     alert("Your score is: " + scoreCount +  " . Click OK to view your price");
     alert("Congratulations! You just won $1000");
-  }
-
+    return;
   }
   do {
     randomIndex = Math.floor(Math.random() * logosArray.length);
   } while (visitedlogos.includes(randomIndex));
   visitedlogos.push(randomIndex);
   
+
+
   const currentLogo = logosArray[randomIndex];
   // console.log(currentLogo);
   logoContainer.innerHTML = `<img src="${currentLogo.image}" alt="Logo">`;
+  
+  //Applying  animation
+  logoContainer.classList.add('slide_in')
+  // logoContainer.classList.add('slide_out')
+
+  logoContainer.addEventListener('transitioned', () =>{
+    logoContainer.classList.add('slide_out')
+    logoContainer.classList.remove('slide_in');
+    logoContainer.classList.add('reset');
+  })
+
   options.forEach((option, number) => {
     option.textContent = currentLogo.options[number];
   });

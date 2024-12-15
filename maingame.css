@@ -7,6 +7,7 @@ body{
 
 h1{
   text-align: center;
+  
 }
 h3{
   text-align: center;
@@ -20,7 +21,18 @@ h2{
   width: 50%;
   height: 50%;
   margin: auto;
+  transition: transform 1s ease-in-out;
 }
+.slide_in{
+  transform: translateX(100%);
+}
+.slide_out{
+  transform: translateX(-100%);
+}
+.reset{
+  transform: translateX(0%);
+}
+
 
 .quizcontainer{
   width: 800px;
@@ -95,4 +107,15 @@ img{
   margin-top: 15px;
   display: flex;
   justify-content: center 
+}
+.leScaleXIn{ 
+  animation-name: leScaleXIn 
+}
+
+@keyframes leScaleXIn {
+    from {
+        transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+    50% { opacity: 1 }
 }
