@@ -104,8 +104,8 @@ img{
 
 @keyframes leScaleXIn {
     from {
-        transform: perspective(400px) rotateX(90deg);
-        opacity: 0;
+        transform: perspective(600px) rotateX(100deg);
+        opacity: 2;
     }
-    50% { opacity: 1 }
+    50% { opacity: 3 }
 }
