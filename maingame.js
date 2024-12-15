@@ -109,8 +109,7 @@ const loadNextImage = () => {
   if (visitedlogos.length === logosArray.length) {
     visitedlogos = [];
     console.log("All logos have been visited.");
-    alert("Your score is: " + scoreCount +  " . Click OK to view your price");
-    alert("You just won $1000");
+    
   }
   do {
     randomIndex = Math.floor(Math.random() * logosArray.length);
@@ -215,3 +214,10 @@ const restartQuiz = () => {
 restartbtn.addEventListener("click", restartQuiz);
 
 
+// prize section
+if (scoreCount >= 18) {
+  alert("Congratulations you have won a prize")
+  
+} else {
+  
+}
