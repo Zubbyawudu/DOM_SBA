@@ -23,16 +23,6 @@ h2{
   margin: auto;
   transition: transform 1s ease-in-out;
 }
-.slide_in{
-  transform: translateX(100%);
-}
-.slide_out{
-  transform: translateX(-100%);
-}
-.reset{
-  transform: translateX(0%);
-}
-
 
 .quizcontainer{
   width: 800px;

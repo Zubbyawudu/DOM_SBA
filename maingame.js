@@ -124,15 +124,6 @@ const loadNextImage = () => {
   // console.log(currentLogo);
   logoContainer.innerHTML = `<img src="${currentLogo.image}" alt="Logo">`;
   
-  //Applying  animation
-  logoContainer.classList.add('slide_in')
-  // logoContainer.classList.add('slide_out')
-
-  logoContainer.addEventListener('transitioned', () =>{
-    logoContainer.classList.add('slide_out')
-    logoContainer.classList.remove('slide_in');
-    logoContainer.classList.add('reset');
-  })
 
   options.forEach((option, number) => {
     option.textContent = currentLogo.options[number];
