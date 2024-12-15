@@ -72,9 +72,29 @@ const logosArray = [{
   options: ["Lamborghini", "Audi", "Jaguar", "Ferrari"],
   answer: "Ferrari"
 },{
-  mage:"https://i.pinimg.com/736x/6e/d4/d7/6ed4d7da41fc086258d5499e9a3cfbe8.jpg",
+  image:"https://i.pinimg.com/736x/6e/d4/d7/6ed4d7da41fc086258d5499e9a3cfbe8.jpg",
   options: ["Toyota", "Renault", "Ferrari", "Mercedes Benz"],
   answer: "Toyota"
+},{ 
+  image:"https://i.pinimg.com/736x/ea/c3/df/eac3dfab9034814d5775cdc2710f9b86.jpg",
+  options: ["Infinity", "Suzuki", "Ferrari", "Subaru"],
+  answer: "Suzuki"
+},{
+  image:"https://m.media-amazon.com/images/I/31saptF44VL.jpg",
+  options: ["Tesla", "Bentley", "Ferrari", "Tata"],
+  answer: "Bentley"
+},{
+  image:"https://i.pinimg.com/564x/7f/1e/ce/7f1ecec019caa2531d35a6c5d756cf73.jpg",
+  options: ["Wagon", "Honda", "Hyundai", "Audi"],
+  answer: "Honda"
+},{
+  image:"https://natalex-images.s3.eu-north-1.amazonaws.com/9b3ea6a7-40c7-447b-a651-77f902f9e2b2.webp",
+  options: ["Hyundai", "Honda", "Dodge", "Subaru"],
+  answer: "Dodge"
+},{
+  image:"https://www.factorywarrantylist.com/uploads/3/3/9/4/3394652/lincoln-logo-11_orig.png",
+  options: ["Renault", "Tesla", "lincoln", "Lamborghini"],
+  answer: "lincoln"
 }
 
 ];
@@ -90,6 +110,7 @@ const loadNextImage = () => {
     visitedlogos = [];
     console.log("All logos have been visited.");
     alert("Your score is: " + scoreCount +  " . Click OK to view your price");
+    alert("You just won $1000");
   }
   do {
     randomIndex = Math.floor(Math.random() * logosArray.length);
