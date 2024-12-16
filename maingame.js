@@ -108,11 +108,18 @@ const loadNextImage = () => {
   // To check if all logos have been Viewed 
   if (visitedlogos.length === logosArray.length) {
     visitedlogos = [];
-    console.log("All logos have been visited.");
-    alert("Your score is: " + scoreCount +  " . Click OK to view your price");
+    // console.log("All logos have been visited.");
+    alert("Your score is: " + scoreCount );
+    prompt(" Enter your Email to view your price");
     alert("Congratulations! You just won $1000");
-    return;
+    
+  }else if ( visitedlogos.length === logosArray.length - 1) {
+    alert("Your score is: " + scoreCount + ". Do you want to play again ?");
+    alert("click OK to play again");
+    
   }
+
+
   do {
     randomIndex = Math.floor(Math.random() * logosArray.length);
   } while (visitedlogos.includes(randomIndex));
@@ -196,7 +203,7 @@ answerContainer.addEventListener("click", (event) => {
       option.style.color = "";
     }
   });
-  // To check if the selected option is correct when clicked
+  // To check if the selected option is correct  when clicked
   if (selectedOption === logosArray[randomIndex].answer) {
     event.target.style.backgroundColor = "green";
     event.target.style.color = "white";
